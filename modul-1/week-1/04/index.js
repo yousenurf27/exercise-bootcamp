@@ -70,14 +70,7 @@ numbers only */
 const array = [1,2,3,4,5,6,7,8,9,10];
 
 const removeOddNumbers = (array) => {
-  const newArray = [];
-  for (const arr of array) {
-    if (arr % 2 == 0) {
-      newArray.push(arr)
-    }
-  }
-
-  return newArray;
+  return array.filter(arr => arr % 2 == 0);
 }
 
 console.log(removeOddNumbers(array));
