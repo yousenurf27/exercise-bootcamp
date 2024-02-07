@@ -345,3 +345,39 @@ const rockPaperScissor = (player) => {
 }
 
 console.log(rockPaperScissor("paper"));
+console.log("\n");
+
+// Try to solve the following questions
+// 1. Find people with html and css skills
+// 2. Delete the user with the name Chad
+// 3. Try deleting the duplicate user in the array above. An example would be ["Bill", "Chad", "Sue"]
+
+const endorsements = [
+   { skill: 'css', user: 'Bill' },
+   { skill: 'javascript', user: 'Chad' },
+   { skill: 'javascript', user: 'Bill' },
+   { skill: 'css', user: 'Sue' },
+   { skill: 'javascript', user: 'Sue' },
+   { skill: 'html', user: 'Sue' }
+];
+
+const delet = endorsements.filter(end => end.user !== "Chad");
+console.log(delet);
+console.log("\n");
+
+const users = endorsements.map(x => x.user);
+
+const newEnd = users.filter((value, index) => users.indexOf(value) === index);
+
+console.log(newEnd);
+console.log("\n");
+
+const uniq = (data, key) => {
+  return [
+    ...new Map(
+      data.map(dt => [key(dt), dt.user])
+    ).values()
+  ]
+}
+
+console.log(uniq(endorsements, it => it.user))
