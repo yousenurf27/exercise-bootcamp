@@ -110,9 +110,9 @@ class ShootingGame {
   }
 
   start() {
-    let lastTimeShooter = Math.random() < 0.5 ? this.player1.name : this.player2.name;
+    let turnShooter = Math.random() < 0.5 ? this.player1.name : this.player2.name;
     do {
-      console.log(`Turn shooting: ${lastTimeShooter}`);
+      console.log(`Turn shooting: ${turnShooter}`);
       console.log("Player Status Before Shooting:");
       this.player1.showStatus();
       this.player2.showStatus();
@@ -127,12 +127,12 @@ class ShootingGame {
       this.player1.showStatus();
       this.player2.showStatus();
 
-      if (lastTimeShooter == this.player1.name) {
+      if (turnShooter == this.player1.name) {
         this.player2.hit(this.player1.power);
-        lastTimeShooter = this.player2.name;
+        turnShooter = this.player2.name;
       } else {
         this.player1.hit(this.player2.power);
-        lastTimeShooter = this.player1.name;
+        turnShooter = this.player1.name;
       }
 
       console.log("Player Status After Shooting:");
