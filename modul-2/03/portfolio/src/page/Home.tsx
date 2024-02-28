@@ -4,7 +4,7 @@ import { SiExpress, SiVite } from "react-icons/si";
 
 const Home = () => {
   return (
-    <div className="h-svh grid grid-cols-12 grid-rows-12 gap-3 p-3 bg-primary">
+    <div className="md:h-svh grid grid-cols-12 grid-rows-12 gap-3 p-3 bg-primary">
       <div className="row-span-full lg:col-span-3 md:col-span-4 col-span-full p-4 rounded bg-secondary">
         <div className="contet-left h-full flex flex-col items-center justify-center">
           <div className="content_img mb-14 lg:size-40 md:size-36 size-32 rounded-full overflow-hidden">
@@ -35,8 +35,8 @@ const Home = () => {
         </p>
       </div>
       <div className="row-span-7 lg:col-span-9 md:col-span-8 col-span-full grid grid-rows-12 p-4 rounded bg-secondary">
-        <h4 className="md:row-span-2 row-span-4 text-2xl font-semibold">My Skills and Achivement</h4>
-        <div className="md:row-span-10 row-span-8 grid grid-cols-2 grid-flow-row gap-2 h-full">
+        <h4 className="md:row-span-2 row-span-3 text-2xl font-semibold">My Skills and Achivement</h4>
+        <div className="md:row-span-10 row-span-9 grid grid-cols-2 grid-flow-row gap-2 h-full">
           <div className="md:col-span-1 col-span-full p-3 rounded-md border-2 border-gray-400 flex">
             <FaNodeJs size={32} className="mr-2"/>
             <FaReact size={32} className="mr-2"/>
