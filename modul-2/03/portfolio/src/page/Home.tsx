@@ -1,3 +1,4 @@
+import { motion, MotionConfig } from 'framer-motion';
 import profileImg from '../assets/profile-photo.jpg';
 import { FaGithub, FaLinkedin, FaNodeJs, FaReact } from 'react-icons/fa';
 import { SiExpress, SiVite } from "react-icons/si";
@@ -7,18 +8,39 @@ const Home = () => {
     <div className="md:h-svh grid grid-cols-12 grid-rows-12 gap-3 p-3 bg-primary">
       <div className="row-span-full lg:col-span-3 md:col-span-4 col-span-full p-4 rounded bg-secondary">
         <div className="contet-left h-full flex flex-col items-center justify-center">
-          <div className="content_img mb-14 lg:size-40 md:size-36 size-32 rounded-full overflow-hidden">
-            <img src={profileImg} alt="Profile" />
-          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.3,
+              ease: [0, 0.71, 0.2, 1.01],
+              scale: {
+                type: "spring",
+                damping: 5,
+                stiffness: 100,
+                restDelta: 0.001
+              }
+            }}
+            className="content_img mb-14 lg:size-40 md:size-36 size-32 rounded-full overflow-hidden">
+              <img src={profileImg} alt="Profile" />
+          </motion.div>
           <h2 className="text-xl font-semibold mb-2">Youse Nur Fauzi</h2>
           <h4 className="text-sm font-medium mb-6">Fullstack Developer 🚀</h4>
           <div className="flex">
-            <a className="mr-3" href="https://github.com/yousenurf27" target="_blank">
-              <FaGithub size={26}/>
-            </a>
-            <a href="https://www.linkedin.com/in/youse-nur-fauzi-210a95234/" target="_blank">
-              <FaLinkedin size={26}/>
-            </a>
+            <MotionConfig
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                className="mr-3" href="https://github.com/yousenurf27" target="_blank">
+                <FaGithub size={26}/>
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                href="https://www.linkedin.com/in/youse-nur-fauzi-210a95234/" target="_blank">
+                <FaLinkedin size={26}/>
+              </motion.a>
+            </MotionConfig>
           </div>
         </div>
       </div>
