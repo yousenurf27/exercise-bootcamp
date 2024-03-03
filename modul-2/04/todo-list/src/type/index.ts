@@ -5,9 +5,6 @@ export type TTodo = {
 }
 
 export type TItemList = {
-  id: string,
-  title: string,
-  isDone: boolean,
   onIsDone: (id: string) => void,
   onDelete: (id: string) => void,
 }
