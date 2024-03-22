@@ -58,8 +58,10 @@ export default function Home() {
           zIndex={-1}>
           <Image
             fill
+            priority={true}
+            quality={45}
             src='/images/banner.jpg'
-            sizes="(max-width: 100%)"
+            sizes="(max-width: 615px)"
             style={{
               objectFit: 'cover',
               borderRadius: '1rem'
