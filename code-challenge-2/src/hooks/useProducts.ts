@@ -3,7 +3,7 @@ import { furnitures, randomNumberArray } from '@/utils'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import React, { useEffect, useRef, useState } from 'react'
 
-const useProducts = (productId: string) => {
+const useProducts = (productId?: string) => {
   const [data, setData] = useState<IFurniture[]>()
   const [dataPaths, setDataPaths] = useState<{name: string, url: string}[]>()
   const searchRef = useRef<HTMLInputElement>(null)
