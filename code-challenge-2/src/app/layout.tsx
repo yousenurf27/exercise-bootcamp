@@ -7,6 +7,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Container } from "@chakra-ui/react";
+import { Suspense } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,7 +35,9 @@ export default function RootLayout({
           <Container
             minH={'100vh'}
             size={{base: 'base', md: 'md', lg: 'xl'}}>
-            {children}
+              <Suspense>
+                {children}
+              </Suspense>
           </Container>
           <Footer />
         </ChakraUIProvider>

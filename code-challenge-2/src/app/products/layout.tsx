@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "X Interior Products",
@@ -11,9 +12,9 @@ const ProductsLayout = ({
   children: React.ReactNode
 }) => {
   return (
-    <>
+    <Suspense>
       {children}
-    </>
+    </Suspense>
   )
 }
 

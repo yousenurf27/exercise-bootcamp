@@ -1,8 +1,10 @@
 import { furnitures } from "@/utils";
 import { Metadata, ResolvingMetadata } from "next";
+import { Suspense } from "react";
 
 type Props = {
   params: { id: string }
+
 }
  
 export async function generateMetadata(
@@ -32,9 +34,9 @@ const DetailProductLayout = ({
   children: React.ReactNode
 }) => {
   return (
-    <>
+    <Suspense>
       {children}
-    </>
+    </Suspense>
   )
 }
 
