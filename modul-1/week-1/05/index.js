@@ -375,8 +375,8 @@ console.log("\n");
 const uniq = (data, key) => {
   return [
     ...new Map(
-      data.map(dt => [key(dt), dt.user])
-    ).values()
+      data.map(dt => [key(dt), dt])
+    ).keys()
   ]
 }
 

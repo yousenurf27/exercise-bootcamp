@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "X Interior",
   description: "Make your home more beautiful with our interior",
   openGraph: {
-    images: ['/images/banner.jpg']
+    images: '/images/banner.jpg'
   }
 };
 
