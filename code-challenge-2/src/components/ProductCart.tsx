@@ -23,7 +23,7 @@ const ProductCart = ({props} : {props: IFurniture}) => {
           position={'relative'}
           h={{ base: '200px', lg: '200px', xl: '250px' }}>
           <Image
-            priority={true}
+            // priority={true}
             fill
             sizes="60vw"
             style={{
