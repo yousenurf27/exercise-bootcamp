@@ -45,7 +45,7 @@ const Page = ({params}: {params: {id: string}}) => {
                     <Image
                       priority={true}
                       fill
-                      sizes='max-height: 500px'
+                      sizes='(max-width: 615px) 70vw, 60vw'
                       style={{
                         objectFit: 'cover',
                         borderRadius: '1rem'

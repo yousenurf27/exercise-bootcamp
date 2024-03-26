@@ -16,6 +16,7 @@ import {
   Text 
 } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -59,9 +60,8 @@ export default function Home() {
           <Image
             fill
             priority={true}
-            quality={45}
             src='/images/banner.jpg'
-            sizes="(max-width: 615px)"
+            sizes="(max-width: 615px) 70vw, 60vw"
             style={{
               objectFit: 'cover',
               borderRadius: '1rem'
@@ -134,9 +134,11 @@ export default function Home() {
           justify={'end'}
           alignItems={'flex-end'}
           mt={'2rem'}>
-          <Button variant='outline' colorScheme='teal'>
-            See More Products
-          </Button>
+            <Link href='/products'>
+              <Button variant='outline' colorScheme='teal'>
+                See More Products
+              </Button>
+            </Link>
         </Flex>
       </Box>
       <Box
