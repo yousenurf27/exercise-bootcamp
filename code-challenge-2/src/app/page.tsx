@@ -59,7 +59,7 @@ export default function Home() {
           zIndex={-1}>
           <Image
             fill
-            // priority={true}
+            priority={true}
             src='/images/banner.jpg'
             sizes="(max-width: 615px) 70vw, 60vw"
             style={{
