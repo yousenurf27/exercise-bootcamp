@@ -1,6 +1,6 @@
 export default class ExampletService {
   getData() {
-    return 'Get data using express'
+    return 'Get data using express edited'
   }
 
   postData() {
